@@ -1,114 +1,220 @@
 # Myntra Sales Analytics Dashboard Pro
 
-A comprehensive analytics dashboard for Myntra sales data, featuring real-time data updates, interactive visualizations, and AI-powered insights.
+An interactive sales analytics dashboard built using **Python**, **Streamlit**, and **Plotly** to analyze Myntra sales data through dynamic visualizations, business KPIs, and AI-powered insights. The dashboard enables users to monitor sales performance, explore trends, evaluate customer behavior, and generate intelligent business recommendations using Google Gemini.
+
+---
 
 ## Features
 
-- 📊 Real-time data monitoring and updates
-- 📈 Interactive sales trend analysis
-- 🏢 Brand performance tracking
-- 📍 Geographical sales analysis
-- 👥 Customer insights
-- 🤖 AI-powered sales predictions
-- 💡 Optimization suggestions
-- 🔒 Secure authentication system
+- 📊 Interactive sales dashboard with responsive visualizations
+- 📈 Monthly and daily sales trend analysis
+- 🏷️ Brand-wise and category-wise performance analysis
+- 📍 State-wise and city-wise sales analysis
+- 👥 Customer demographics and rating analysis
+- 📊 Key business KPI monitoring
+- 🤖 AI-powered sales insights and recommendations using Google Gemini
+- 🔍 Dynamic filtering by date, category, and state
+- 🔄 Automatic dataset refresh on data updates
+- 🔐 Secure user authentication and registration system
+- ⚡ Fast and responsive Streamlit interface
 
-## Prerequisites
+---
 
-- Python 3.8 or higher
-- pip (Python package installer)
-- Git (optional, for version control)
+## Dashboard Highlights
 
-## Installation
+### Business KPIs
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/myntra-analytics.git
-cd myntra-analytics
-```
+- Total Sales
+- Total Orders
+- Average Product Rating
+- Average Discount
 
-2. Create a virtual environment (recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+### Sales Analysis
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+- Monthly Sales Trends
+- Daily Sales Trends
+- Brand Performance
+- Category Performance
+- Sub-category Distribution
 
-4. Set up environment variables:
-Create a `.env` file in the project root with the following variables:
-```
-GEMINI_API_KEY=your_gemini_api_key
-```
+### Customer Analysis
 
-## Configuration
+- Customer Age Distribution
+- Product Rating Distribution
 
-1. Update the data source path in `dashboard.py`:
-```python
-EXCEL_PATH = "Myntra_dataset_large.csv"
-```
+### Geographical Analysis
 
-2. Configure authentication settings in `auth.py` (if needed)
+- State-wise Sales
+- Top Cities by Sales
 
-## Running the Dashboard
+### AI Sales Assistant
 
-1. Start the dashboard:
-```bash
-streamlit run dashboard.py
-```
+The integrated Google Gemini AI Assistant allows users to ask business questions such as:
 
-2. Open your web browser and navigate to:
-```
-http://localhost:8501
-```
+- Which brand has the highest sales?
+- Which category performs the best?
+- Which brands are most popular in a specific city?
+- Generate business insights from the dataset.
+- Recommend strategies to improve sales performance.
+- Analyze trends based on selected filters.
 
-## Deployment
+---
 
-### Deploying to Streamlit Cloud
+## Tech Stack
 
-1.  **Push to GitHub**: Ensure your code is pushed to a GitHub repository.
-2.  **Create App**: Go to [Streamlit Cloud](https://streamlit.io/cloud) and click "New app".
-3.  **Select Repository**: Choose your repository, branch, and the main file path (`dashboard.py`).
-4.  **Configure Secrets**:
-    *   Click on "Advanced settings" before deploying, or go to your app settings after deployment.
-    *   Navigate to the "Secrets" tab.
-    *   Add your Gemini API key in the following format:
-        ```toml
-        GEMINI_API_KEY = "your_gemini_api_key_here"
-        ```
-5.  **Deploy**: Click "Deploy!".
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Data Processing | Pandas, NumPy |
+| Dashboard | Streamlit |
+| Data Visualization | Plotly, Matplotlib |
+| Machine Learning Libraries | Scikit-learn |
+| AI Integration | Google Gemini API |
+| Authentication | SHA-256 Password Hashing |
+| Version Control | Git & GitHub |
 
-### Important Notes
-*   **Data Persistence**: This app uses a CSV file (`users.csv`) for user storage. On Streamlit Cloud, the file system is ephemeral, meaning any new users registered will be lost when the app restarts or re-deploys. For a production application, consider connecting to a database (e.g., Google Sheets, Firestore, or SQL).
-*   **Dependencies**: Streamlit Cloud will automatically install dependencies from `requirements.txt`.
+---
 
 ## Project Structure
 
 ```
 myntra-analytics/
-├── dashboard.py          # Main dashboard application
-├── auth.py              # Authentication module
-├── data_watcher.py      # Real-time data monitoring
-├── requirements.txt     # Project dependencies
-├── README.md           # Project documentation
-└── .env                # Environment variables
+│
+├── dashboard.py              # Main dashboard application
+├── auth.py                   # User authentication module
+├── data_watcher.py           # Automatic dataset monitoring
+├── requirements.txt
+├── Myntra_dataset_large.csv
+├── users.csv
+├── README.md
+└── .env
 ```
 
-## Contributing
+---
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+## Installation
 
-## License
+### Clone the Repository
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+```bash
+git clone https://github.com/SuhaniNautiyal/myntra-sales-analytics-dashboard.git
+cd myntra-sales-analytics-dashboard
+```
 
-## Support
+### Create a Virtual Environment
 
-For support, please open an issue in the GitHub repository or contact the maintainers.
+Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Linux/macOS
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+---
+
+## Running the Application
+
+Start the Streamlit application.
+
+```bash
+streamlit run dashboard.py
+```
+
+Open your browser and visit:
+
+```
+http://localhost:8501
+```
+
+---
+
+## Dataset
+
+The dashboard analyzes Myntra sales data containing information such as:
+
+- Order Date
+- Product Category
+- Sub-category
+- Brand Name
+- Original Price
+- Discount Percentage
+- Discounted Price
+- Product Ratings
+- Customer Age
+- Customer ID
+- State
+- City
+
+---
+
+## Key Insights Generated
+
+The dashboard enables users to:
+
+- Identify top-performing brands and categories.
+- Track sales performance over time.
+- Compare sales across states and cities.
+- Analyze customer demographics.
+- Monitor product ratings and discounts.
+- Discover sales patterns using interactive visualizations.
+- Generate AI-assisted business recommendations.
+
+---
+
+## Deployment
+
+The application can be deployed easily on **Streamlit Cloud**.
+
+### Steps
+
+1. Push the repository to GitHub.
+2. Create a new Streamlit Cloud application.
+3. Select the repository and branch.
+4. Set `dashboard.py` as the entry point.
+5. Add the following secret:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+6. Deploy the application.
+
+---
+
+## Future Enhancements
+
+- Predictive sales forecasting
+- Inventory optimization
+- Customer segmentation
+- Sales report export (PDF/Excel)
+- Role-based access control
+- Additional business KPI dashboards
+
+---
+
+## Author
+
+**Suhani Nautiyal**
+
+GitHub: https://github.com/SuhaniNautiyal
