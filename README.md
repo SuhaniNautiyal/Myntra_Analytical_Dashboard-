@@ -1,4 +1,4 @@
-# Myntra Sales Analytics Dashboard Pro
+# Myntra Sales Analytics Dashboard
 
 An interactive sales analytics dashboard built using **Python**, **Streamlit**, and **Plotly** to analyze Myntra sales data through dynamic visualizations, business KPIs, and AI-powered insights. The dashboard enables users to monitor sales performance, explore trends, evaluate customer behavior, and generate intelligent business recommendations using Google Gemini.
 
